@@ -1,0 +1,13 @@
+{
+  "name": "login-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "간단한 서버 저장형 회원가입 및 로그인 예제",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

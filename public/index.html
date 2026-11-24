@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>로그인 서버</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-live="polite">
+        <div class="brand-mark" aria-hidden="true">L</div>
+        <p class="eyebrow">WELCOME</p>
+        <h1 id="page-title">다시 만나서 반가워요</h1>
+        <p class="subtitle" id="page-subtitle">로그인하고 서비스를 계속 이용해 보세요.</p>
+
+        <div id="auth-view">
+          <div class="tabs" role="tablist" aria-label="계정 메뉴">
+            <button class="tab active" id="login-tab" type="button" role="tab" aria-selected="true">로그인</button>
+            <button class="tab" id="register-tab" type="button" role="tab" aria-selected="false">회원가입</button>
+          </div>
+
+          <form id="auth-form">
+            <label id="name-field" class="field hidden">
+              <span>이름</span>
+              <input name="name" type="text" autocomplete="name" maxlength="50" placeholder="홍길동" />
+            </label>
+            <label class="field">
+              <span>이메일</span>
+              <input name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required />
+            </label>
+            <label class="field">
+              <span>비밀번호</span>
+              <input
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                minlength="8"
+                maxlength="128"
+                placeholder="8자 이상 입력해 주세요"
+                required
+              />
+            </label>
+            <p class="message" id="form-message" role="alert"></p>
+            <button class="primary-button" id="submit-button" type="submit">로그인</button>
+          </form>
+          <p class="privacy-note"><span aria-hidden="true">🔒</span> 계정 정보는 서버에 안전하게 저장됩니다.</p>
+        </div>
+
+        <div id="account-view" class="hidden">
+          <div class="account-panel">
+            <div class="avatar" id="avatar">L</div>
+            <p class="welcome-name" id="welcome-name"></p>
+            <p class="account-email" id="account-email"></p>
+          </div>
+          <p class="message" id="account-message" role="status"></p>
+          <button class="secondary-button" id="logout-button" type="button">로그아웃</button>
+        </div>
+      </section>
+      <footer>간편하고 안전한 계정 관리</footer>
+    </main>
+  </body>
+</html>
